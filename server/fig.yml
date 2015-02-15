@@ -1,10 +1,13 @@
-elasticsearch:
+es:
   image: dockerfile/elasticsearch
-  command: /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
-  expose: "9200"
-  volumes: custom-elasticsearch/data:/data
+  expose:
+    - "9200"
+    - "9300"
+  volumes:
+    - elasticsearch:/data
 
 nginx:
-  build: custom-nginx
-  links: elasticsearch
+  build: nginx
+  links:
+    - es
   ports: "8080:8080"

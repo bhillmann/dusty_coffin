@@ -161,6 +161,4 @@ db
 # Ignore the authtoken and pickle files
 *.p
 
-# Ignore the kibana folder
-kibana/
-dusty_coffin/dusty_coffin.iml
+server/elasticsearch
