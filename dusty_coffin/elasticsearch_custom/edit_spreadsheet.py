@@ -10,9 +10,12 @@ csv = urllib.request.urlopen("https://docs.google.com/spreadsheet/pub?key=0Ahf71
 bio = BytesIO(csv)
 csv_pd = pd.DataFrame.from_csv(bio)
 csv_pd.shape
+csv_pd.columns = ["title", "username", "description", "subject_areas", "type", "locations", "tag_words", "discipline", "url", "creator", "time_periods", "alternate_title", "source_type", "keywords", "macalester_dataset"]
 json_objs = csv_pd.reset_index().to_json(orient='index')
 d = json.loads(json_objs)
 es = Elasticsearch('ec2-52-10-17-100.us-west-2.compute.amazonaws.com:9200')
+# ignore 404 and 400
+es.indices.delete(index='datasets_index', ignore=[400, 404])
 for key in d:
     print(d[key])
     res = es.index(index="datasets_index", doc_type="dataset", body=d[key])
