@@ -16,12 +16,12 @@ class @CitiesModel
     @table.loading true
 
     req = new XMLHttpRequest()
-    req.open 'GET', '/api/cities', true
+    req.open 'GET', 'http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_search?', true
 
     req.onload = =>
       if req.status >= 200 and req.status < 400
         response = JSON.parse req.responseText
-        rows = response.results.map (row) => new City @, row
+        rows = response.hits.hits.map (row) => new City @, row
         @table.rows rows
         @table.loading false
       else
@@ -35,3 +35,6 @@ class @CitiesModel
     req.send()
 
     ko.applyBindings @
+
+class City
+  
