@@ -1,4 +1,4 @@
-class @CitiesModel
+class @DatasetsModel
 
   constructor: ->
 
@@ -21,7 +21,7 @@ class @CitiesModel
     req.onload = =>
       if req.status >= 200 and req.status < 400
         response = JSON.parse req.responseText
-        rows = response.hits.hits.map (row) => new City @, row
+        rows = response.hits.hits.map (row) => new City row
         @table.rows rows
         @table.loading false
       else
@@ -36,5 +36,7 @@ class @CitiesModel
 
     ko.applyBindings @
 
-class City
-  
+class Datasets
+
+  constructor: (row)->
+    @row = row
