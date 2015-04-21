@@ -21,8 +21,8 @@ class @DatasetsModel
     req.onload = =>
       if req.status >= 200 and req.status < 400
         response = JSON.parse req.responseText
-        rows = response.hits.hits.map (row) => new City row
-        @table.rows rows
+        hits = response.hits.hits.map (hits) => new Datasets hits
+        @table.rows hits
         @table.loading false
       else
         alert "Error communicating with server"
