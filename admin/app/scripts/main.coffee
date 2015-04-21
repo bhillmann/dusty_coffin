@@ -7,33 +7,45 @@ class @DatasetsModel
       recordWordPlural: 'datasets'
       sortDir:          'desc'
       sortField:        'title'
-      perPage:          10
+      perPage:          @size
       unsortedClass:    'glyphicon glyphicon-sort'
       ascSortClass:     'glyphicon glyphicon-sort-by-attributes'
       descSortClass:    'glyphicon glyphicon-sort-by-attributes-alt'
 
     @table = new DataTable [], tableOptions
     @table.loading true
+    req_size = new XMLHttpRequest()
+    req_size.open 'GET', 'http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_count', true
+    req_size.onload = =>
+      if req_size.status >= 200 and req_size.status < 400
+        count = JSON.parse(req_size.responseText).count
+        req = new XMLHttpRequest()
+        req.open 'GET', 'http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_search?&size=68', true
 
-    req = new XMLHttpRequest()
-    req.open 'GET', 'http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_search?', true
+        req.onload = =>
+          if req.status >= 200 and req.status < 400
+            response = JSON.parse req.responseText
+            hits = response.hits.hits.map (hit) => new Datasets @, hit
+            @table.rows hits
+            @table.loading false
+          else
+            alert "Error communicating with server"
+            @table.loading false
 
-    req.onload = =>
-      if req.status >= 200 and req.status < 400
-        response = JSON.parse req.responseText
-        hits = response.hits.hits.map (hit) => new Datasets @, hit
-        @table.rows hits
-        @table.loading false
+        req.onerror = =>
+          alert "Error communicating with server"
+          @table.loading false
+
+        req.send()
       else
         alert "Error communicating with server"
         @table.loading false
 
-    req.onerror = =>
+    req_size.onerror = =>
       alert "Error communicating with server"
       @table.loading false
 
-    req.send()
-
+    req_size.send()
     ko.applyBindings @
 
 class Datasets
