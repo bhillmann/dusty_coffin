@@ -29,8 +29,8 @@
 
       <div class="row">
           <button class="btn btn-primary" data-bind="click: newDataset">New</button>
-          <button class="btn btn-primary" data-bind="click: editDataset, disable: !datasetSelected()">Edit</button>
-          <button class="btn btn-primary" data-bind="click: submitDeleteDataset, disable: !datasetSelected()">Delete</button>
+          <button class="btn btn-primary" data-bind="click: editDataset, disable: !datasetBeenSelected()">Edit</button>
+          <button class="btn btn-primary" data-bind="click: submitDeleteDataset, disable: !datasetBeenSelected()">Delete</button>
       </div>
 
       <div data-bind="with: table">

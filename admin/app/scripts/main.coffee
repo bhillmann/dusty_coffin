@@ -1,6 +1,7 @@
 class @DatasetsViewModel
   constructor: ->
-    @datasetSelected = ko.observable(false)
+    @datasetBeenSelected = ko.observable(false)
+    @datasetSelected = ko.observable(new Dataset @)
     @showDialog = ko.observable(false)
     @submitModal = ()=>
 
@@ -51,8 +52,10 @@ class @DatasetsViewModel
     ko.applyBindings @
 
   selectDataset: (dataset)=>
-    if @datasetSelected()
+    if @datasetBeenSelected()
       @datasetSelected().isSelected(false)
+    else
+      @datasetBeenSelected(true)
     @datasetSelected(dataset)
     @datasetSelected().isSelected(true)
 
@@ -68,7 +71,10 @@ class @DatasetsViewModel
     console.log('delete')
 
   newDataset: ()=>
-    new Dataset(@)
+    if @datasetBeenSelected()
+      @datasetSelected().isSelected(false)
+    @datasetBeenSelected(false)
+    @datasetSelected(new Dataset(@))
     @submitModal = @submitNewDataset
     @showDialog(true)
 
