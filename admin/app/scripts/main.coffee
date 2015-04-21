@@ -1,7 +1,7 @@
 class @DatasetsModel
 
   constructor: ->
-    @selected = ko.observable()
+    @datasetSelected = ko.observable(false)
     tableOptions =
       recordWord:       'dataset'
       recordWordPlural: 'datasets'
@@ -49,10 +49,16 @@ class @DatasetsModel
     ko.applyBindings @
 
   selectDataset: (dataset)=>
-    if @selected()
-      @selected().isSelected(false)
-    @selected(dataset)
-    @selected().isSelected(true)
+    if @datasetSelected()
+      @datasetSelected().isSelected(false)
+    @datasetSelected(dataset)
+    @datasetSelected().isSelected(true)
+
+  editDataset: ()=>
+    console.log('edit')
+
+  deleteDataset: ()=>
+    console.log('delete')
 
 class Datasets
   constructor: (@view, hit)->

@@ -88,7 +88,7 @@ body {
   }
 }
 
-tr.row_selected td{
+tr.row-selected td{
   background-color: #428bca !important;
   color: white;
 }
