@@ -30,7 +30,7 @@
       <div class="row">
           <button class="btn btn-primary" data-bind="click: newDataset">New</button>
           <button class="btn btn-primary" data-bind="click: editDataset, disable: !datasetSelected()">Edit</button>
-          <button class="btn btn-primary" data-bind="click: deleteDataset, disable: !datasetSelected()">Delete</button>
+          <button class="btn btn-primary" data-bind="click: submitDeleteDataset, disable: !datasetSelected()">Delete</button>
       </div>
 
       <div data-bind="with: table">
@@ -110,7 +110,7 @@
                     body
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary btn-xs" data-bind="click : submit" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-xs" data-bind="click : submitModal">Submit</button>
                 </div>
             </div>
         </div>

@@ -2,6 +2,8 @@ class @DatasetsViewModel
   constructor: ->
     @datasetSelected = ko.observable(false)
     @showDialog = ko.observable(false)
+    @submitModal = ()=>
+
     tableOptions =
       recordWord:       'dataset'
       recordWordPlural: 'datasets'
@@ -25,7 +27,7 @@ class @DatasetsViewModel
         req.onload = =>
           if req.status >= 200 and req.status < 400
             response = JSON.parse req.responseText
-            hits = response.hits.hits.map (hit) => new Datasets @, hit
+            hits = response.hits.hits.map (hit) => new Dataset @, hit
             @table.rows hits
             @table.loading false
           else
@@ -55,23 +57,32 @@ class @DatasetsViewModel
     @datasetSelected().isSelected(true)
 
   editDataset: ()=>
-    console.log('edit')
+    @submitModal = @submitEditDataset
     @showDialog(true)
 
-  deleteDataset: ()=>
+  submitEditDataset: ()=>
+    console.log('edit')
+    @showDialog(false)
+
+  submitDeleteDataset: ()=>
     console.log('delete')
-    @showDialog(true)
 
   newDataset: ()=>
-    console.log('new')
+    new Dataset(@)
+    @submitModal = @submitNewDataset
     @showDialog(true)
 
-class Datasets
-  constructor: (@view, hit)->
-    @title = hit._source.title
-    @type = hit._source.type
-    @url = hit._source.url
-    @id = hit._id
+  submitNewDataset: ()=>
+    console.log('edit')
+    @showDialog(false)
+
+class Dataset
+  constructor: (@view, hit='')->
+    if hit
+      @title = hit._source.title
+      @type = hit._source.type
+      @url = hit._source.url
+      @id = hit._id
     @isSelected = ko.observable(false)
 
   clickHandler: ()=>
@@ -92,10 +103,3 @@ ko.bindingHandlers.modal =
       $(element).modal 'show'
     else
       $(element).modal 'hide'
-
-PopupViewModel = ->
-  @showDialog = ko.observable(false)
-
-  @submit = ->
-    alert 'submit'
-    @showDialog false
