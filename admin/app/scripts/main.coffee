@@ -3,11 +3,11 @@ class @DatasetsModel
   constructor: ->
 
     tableOptions =
-      recordWord:       'city'
-      recordWordPlural: 'cities'
+      recordWord:       'dataset'
+      recordWordPlural: 'datasets'
       sortDir:          'desc'
-      sortField:        'population'
-      perPage:          15
+      sortField:        'title'
+      perPage:          10
       unsortedClass:    'glyphicon glyphicon-sort'
       ascSortClass:     'glyphicon glyphicon-sort-by-attributes'
       descSortClass:    'glyphicon glyphicon-sort-by-attributes-alt'
@@ -21,7 +21,7 @@ class @DatasetsModel
     req.onload = =>
       if req.status >= 200 and req.status < 400
         response = JSON.parse req.responseText
-        hits = response.hits.hits.map (hits) => new Datasets hits
+        hits = response.hits.hits.map (hit) => new Datasets @, hit
         @table.rows hits
         @table.loading false
       else
@@ -38,5 +38,7 @@ class @DatasetsModel
 
 class Datasets
 
-  constructor: (row)->
-    @row = row
+  constructor: (@view, hit)->
+    @title = hit._source.title
+    @type = hit._source.type
+    @url = hit._source.url
