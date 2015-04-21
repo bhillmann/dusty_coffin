@@ -89,10 +89,10 @@ body {
 }
 
 tr.row_selected td{
-  background-color:red !important;
+  background-color: #428bca !important;
+  color: white;
 }
 
 tr.dataset:hover td{
-  background-color:pink !important;
   cursor: pointer;
 }
