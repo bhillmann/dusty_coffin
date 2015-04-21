@@ -1,7 +1,7 @@
 class @DatasetsModel
 
   constructor: ->
-
+    @selected = ko.observable()
     tableOptions =
       recordWord:       'dataset'
       recordWordPlural: 'datasets'
@@ -48,9 +48,19 @@ class @DatasetsModel
     req_size.send()
     ko.applyBindings @
 
-class Datasets
+  selectDataset: (dataset)=>
+    if @selected()
+      @selected().isSelected(false)
+    @selected(dataset)
+    @selected().isSelected(true)
 
+class Datasets
   constructor: (@view, hit)->
     @title = hit._source.title
     @type = hit._source.type
     @url = hit._source.url
+    @id = hit._id
+    @isSelected = ko.observable(false)
+
+  clickHandler: ()=>
+    @view.selectDataset(@)

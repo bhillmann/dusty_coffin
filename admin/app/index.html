@@ -68,7 +68,7 @@
                   </td>
                 </tr>
                 <!-- ko foreach: {data: pagedRows, as: '$row'}  -->
-                <tr>
+                <tr class="dataset" data-bind="click: $row.clickHandler, css: {'row_selected': isSelected}">
                   <td data-bind="text: $row.title"></td>
                   <td data-bind="text: $row.type"></td>
                   <td data-bind="text: $row.url"></td>
