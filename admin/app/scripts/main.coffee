@@ -84,11 +84,12 @@ class @DatasetsViewModel
 
 class Dataset
   constructor: (@view, hit='')->
+    @title = ko.observable('')
     if hit
-      @title = hit._source.title
-      @type = hit._source.type
-      @url = hit._source.url
-      @id = hit._id
+      @title(hit._source.title)
+      @type =  ko.observable(hit._source.type)
+      @url =  ko.observable(hit._source.url)
+      @id =  ko.observable(hit._id)
     @isSelected = ko.observable(false)
 
   clickHandler: ()=>

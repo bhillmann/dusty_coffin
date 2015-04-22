@@ -100,6 +100,9 @@
       </div>
 
       <div class="modal fade" tabindex="-1" role="dialog" data-bind="modal : showDialog">
+        <!-- ["title", "username", "description", "subject_areas", "type", "locations", "tag_words",
+        "discipline", "url", "creator", "time_periods", "alternate_title",
+        "source_type", "keywords", "macalester_dataset"] -->
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -107,7 +110,13 @@
                      <h4 class="modal-title">title</h4>
                 </div>
                 <div class="modal-body">
-                    body
+                    <form role="form">
+                      <div class="form-group">
+                        <label for="datasetTitle">Title</label>
+                        <input type="text" class="form-control" id="datasetTitle" placeholder="Enter title"
+                          data-bind="value: datasetSelected().title">
+                      </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary btn-xs" data-bind="click : submitModal">Submit</button>
