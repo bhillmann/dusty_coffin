@@ -84,13 +84,26 @@ class @DatasetsViewModel
 
 class Dataset
   constructor: (@view, hit='')->
-    @title = ko.observable('')
+    @title = ko.observable()
+    @username = ko.observable()
+    @subjects = ko.observable()
+    @locations = ko.observable()
+    @tags = ko.observable()
+    @url =  ko.observable()
+    @publisher = ko.observable()
+    @dates = ko.observable()
+    @resourceType = ko.observable()
+    @frequency = ko.observable()
+    @geographic_granularity = ko.observable()
     if hit
-      @title(hit._source.title)
-      @type =  ko.observable(hit._source.type)
-      @url =  ko.observable(hit._source.url)
       @id =  ko.observable(hit._id)
+      @fromSource(hit._source)
     @isSelected = ko.observable(false)
+
+  fromSource: (source)=>
+    @title = ko.observable(source.title)
+    @url =  ko.observable(source.url)
+    @type =  ko.observable(source.type)
 
   clickHandler: ()=>
     @view.selectDataset(@)
