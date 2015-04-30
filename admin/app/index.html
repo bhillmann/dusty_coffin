@@ -114,7 +114,37 @@
                       <div class="form-group">
                         <label for="datasetTitle">Title</label>
                         <input type="text" class="form-control" id="datasetTitle" placeholder="Enter title"
-                          data-bind="value: datasetSelected().title">
+                        data-bind="value: datasetSelected().title">
+                        <label for="datasetDescription">Description</label>
+                        <input type="text" class="form-control" id="datasetDescription" placeholder="Enter description"
+                        data-bind="value: datasetSelected().description">
+                        <label for="datasetSubjects">Subjects</label>
+                        <input type="text" class="form-control" id="datasetSubjects" placeholder="Enter subjects"
+                        data-bind="value: datasetSelected().subjects">
+                        <label for="datasetLocations">Locations</label>
+                        <input type="text" class="form-control" id="datasetLocations" placeholder="Enter locations"
+                        data-bind="value: datasetSelected().locations">
+                        <label for="datasetTags">Tags</label>
+                        <input type="text" class="form-control" id="datasetTags" placeholder="Enter tags"
+                        data-bind="value: datasetSelected().tags">
+                        <label for="datasetURL">URL</label>
+                        <input type="text" class="form-control" id="datasetURL" placeholder="Enter url"
+                        data-bind="value: datasetSelected().url">
+                        <label for="datasetPublisher">Publisher</label>
+                        <input type="text" class="form-control" id="datasetPublisher" placeholder="Enter publisher"
+                        data-bind="value: datasetSelected().publisher">
+                        <label for="datasetDates">Dates</label>
+                        <input type="text" class="form-control" id="datasetDates" placeholder="Enter dates"
+                        data-bind="value: datasetSelected().dates">
+                        <label for="datasetResourceTypes">Resource Types</label>
+                        <input type="text" class="form-control" id="datasetResourceTypes" placeholder="Enter resource types"
+                          data-bind="value: datasetSelected().resourceTypes">
+                        <label for="datasetFrequency">Frequency</label>
+                        <input type="text" class="form-control" id="datasetFrequency" placeholder="Enter frequency"
+                          data-bind="value: datasetSelected().frequency">
+                        <label for="datasetGeographicGranularity">Geographic Granularity</label>
+                        <input type="text" class="form-control" id="datasetGeographicGranularity" placeholder="Enter geographic granularity"
+                          data-bind="value: datasetSelected().geographicGranularity">
                       </div>
                     </form>
                 </div>
