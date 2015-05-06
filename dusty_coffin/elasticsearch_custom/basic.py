@@ -1,5 +1,3 @@
-__author__ = 'bhillmann'
-
 from elasticsearch import Elasticsearch
 import os
 import json

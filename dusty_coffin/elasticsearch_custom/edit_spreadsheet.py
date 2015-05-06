@@ -1,5 +1,3 @@
-__author__ = 'bhillmann'
-
 import urllib.request
 from io import BytesIO
 import pandas as pd
