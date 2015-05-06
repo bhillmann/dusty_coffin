@@ -23,7 +23,7 @@ class @DatasetsViewModel
       if req_size.status >= 200 and req_size.status < 400
         count = JSON.parse(req_size.responseText).count
         req = new XMLHttpRequest()
-        req.open 'GET', 'http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_search?&size=68', true
+        req.open 'GET', 'http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_search?&size=100', true
 
         req.onload = =>
           if req.status >= 200 and req.status < 400
@@ -84,26 +84,35 @@ class @DatasetsViewModel
 
 class Dataset
   constructor: (@view, hit='')->
-    @title = ko.observable()
-    @username = ko.observable()
-    @subjects = ko.observable()
-    @locations = ko.observable()
-    @tags = ko.observable()
-    @url =  ko.observable()
-    @publisher = ko.observable()
-    @dates = ko.observable()
-    @resourceType = ko.observable()
+    @author = ko.observable()
+    @description = ko.observable()
     @frequency = ko.observable()
     @geographic_granularity = ko.observable()
+    @location = ko.observable()
+    @source_type = ko.observable()
+    @tag_words =  ko.observableArray()
+    @time_periods = ko.observableArray()
+    @timestamp = ko.observable()
+    @title = ko.observable()
+    @types = ko.observableArray()
+    @url = ko.observable()
     if hit
       @id =  ko.observable(hit._id)
       @fromSource(hit._source)
     @isSelected = ko.observable(false)
 
   fromSource: (source)=>
-    @title = ko.observable(source.title)
-    @url =  ko.observable(source.url)
-    @type =  ko.observable(source.type)
+    @author(source.author)
+    @description(source.description)
+    @frequency(source.frequency)
+    @geographic_granularity(source.geographic_granularity)
+    @location(source.location)
+    @source_type(source.source_type)
+    @tag_words(source.tag_words)
+    @time_periods(source.time_periods)
+    @title(source.title)
+    @types(source.types)
+    @url(source.url)
 
   clickHandler: ()=>
     @view.selectDataset(@)

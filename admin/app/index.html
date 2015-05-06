@@ -49,9 +49,9 @@
                   Title
                   <i data-bind="css: sortClass('title')"></i>
                 </th>
-                <th style="width: 33%;" data-bind="click: toggleSort('type')" class="sortable">
-                  Type
-                  <i data-bind="css: sortClass('type')"></i>
+                <th style="width: 33%;" data-bind="click: toggleSort('location')" class="sortable">
+                  Location
+                  <i data-bind="css: sortClass('location')"></i>
                 </th>
                 <th style="width: 33%;" data-bind="click: toggleSort('url')" class="sortable">
                   Url
@@ -74,7 +74,7 @@
               <!-- ko foreach: {data: pagedRows, as: '$row'}  -->
               <tr class="dataset" data-bind="click: $row.clickHandler, css: {'row-selected': isSelected}">
                 <td data-bind="text: $row.title"></td>
-                <td data-bind="text: $row.type"></td>
+                <td data-bind="text: $row.location"></td>
                 <td data-bind="text: $row.url"></td>
               </tr>
               <!-- /ko -->
@@ -114,37 +114,34 @@
                       <div class="form-group">
                         <label for="datasetTitle">Title</label>
                         <input type="text" class="form-control" id="datasetTitle" placeholder="Enter title"
-                        data-bind="value: datasetSelected().title">
+                          data-bind="value: datasetSelected().title">
                         <label for="datasetDescription">Description</label>
                         <input type="text" class="form-control" id="datasetDescription" placeholder="Enter description"
-                        data-bind="value: datasetSelected().description">
-                        <label for="datasetSubjects">Subjects</label>
-                        <input type="text" class="form-control" id="datasetSubjects" placeholder="Enter subjects"
-                        data-bind="value: datasetSelected().subjects">
-                        <label for="datasetLocations">Locations</label>
-                        <input type="text" class="form-control" id="datasetLocations" placeholder="Enter locations"
-                        data-bind="value: datasetSelected().locations">
-                        <label for="datasetTags">Tags</label>
+                          data-bind="value: datasetSelected().description">
+                        <label for="datasetTags">Tag Words</label>
                         <input type="text" class="form-control" id="datasetTags" placeholder="Enter tags"
-                        data-bind="value: datasetSelected().tags">
+                          data-bind="value: datasetSelected().tag_words">
                         <label for="datasetURL">URL</label>
                         <input type="text" class="form-control" id="datasetURL" placeholder="Enter url"
-                        data-bind="value: datasetSelected().url">
-                        <label for="datasetPublisher">Publisher</label>
-                        <input type="text" class="form-control" id="datasetPublisher" placeholder="Enter publisher"
-                        data-bind="value: datasetSelected().publisher">
-                        <label for="datasetDates">Dates</label>
+                          data-bind="value: datasetSelected().url">
+                        <label for="datasetDates">Time Periods</label>
                         <input type="text" class="form-control" id="datasetDates" placeholder="Enter dates"
-                        data-bind="value: datasetSelected().dates">
-                        <label for="datasetResourceTypes">Resource Types</label>
+                          data-bind="value: datasetSelected().time_periods">
+                        <label for="datasetResourceTypes">Types</label>
                         <input type="text" class="form-control" id="datasetResourceTypes" placeholder="Enter resource types"
-                          data-bind="value: datasetSelected().resourceTypes">
+                          data-bind="value: datasetSelected().types">
                         <label for="datasetFrequency">Frequency</label>
                         <input type="text" class="form-control" id="datasetFrequency" placeholder="Enter frequency"
                           data-bind="value: datasetSelected().frequency">
                         <label for="datasetGeographicGranularity">Geographic Granularity</label>
                         <input type="text" class="form-control" id="datasetGeographicGranularity" placeholder="Enter geographic granularity"
-                          data-bind="value: datasetSelected().geographicGranularity">
+                          data-bind="value: datasetSelected().geographic_granularity">
+                        <label for="datasetAuthor">Author</label>
+                        <input type="text" class="form-control" id="datasetAuthor" placeholder="Enter author"
+                          data-bind="value: datasetSelected().author">
+                        <label for="datasetSourceType">Source Type</label>
+                        <input type="text" class="form-control" id="datasetSourceType" placeholder="Enter source type"
+                          data-bind="value: datasetSelected().source_type">
                       </div>
                     </form>
                 </div>
