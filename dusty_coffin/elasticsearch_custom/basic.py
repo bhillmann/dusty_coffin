@@ -12,8 +12,3 @@ for (dirpath, dirnames, filenames) in os.walk(path):
             list_data = json.load(f)
             for doc in list_data:
                 es.create(index="test-index", doc_type='test', body=doc)
-
-
-class Reat:
-    def __init__(self):
-        pass
