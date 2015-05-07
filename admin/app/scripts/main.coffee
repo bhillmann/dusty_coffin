@@ -91,7 +91,8 @@ class @DatasetsViewModel
       console.log(error)
       console.log(response)
       @client.indices.flush(()->
-        location.reload())
+        location.reload()
+      )
     )
 
   submitDeleteDataset: ()=>
@@ -102,8 +103,7 @@ class @DatasetsViewModel
     }, (error, response)=>
       console.log(error)
       console.log(response)
-      @client.indices.flush(()->
-        location.reload())
+      location.reload()
     )
 
   newDataset: ()=>
