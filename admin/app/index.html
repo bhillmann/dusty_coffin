@@ -116,8 +116,8 @@
                         <input type="text" class="form-control" id="datasetTitle" placeholder="Enter title"
                           data-bind="value: datasetSelected().title">
                         <label for="datasetDescription">Description</label>
-                        <input type="text" class="form-control" id="datasetDescription" placeholder="Enter description"
-                          data-bind="value: datasetSelected().description">
+                        <textarea class="form-control" id="datasetDescription" placeholder="Enter description"
+                          data-bind="value: datasetSelected().description"></textarea>
                         <label for="datasetTags">Tag Words</label>
                         <input type="text" class="form-control" id="datasetTags" placeholder="Enter tags"
                           data-bind="value: datasetSelected().tag_words">
@@ -142,6 +142,9 @@
                         <label for="datasetSourceType">Source Type</label>
                         <input type="text" class="form-control" id="datasetSourceType" placeholder="Enter source type"
                           data-bind="value: datasetSelected().source_type">
+                        <label for="datasetLocation">Location</label>
+                        <input type="text" class="form-control" id="datasetLocation" placeholder="Enter location"
+                            data-bind="value: datasetSelected().location">
                       </div>
                     </form>
                 </div>
@@ -170,6 +173,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/knockout/dist/knockout.js"></script>
     <script src="bower_components/knockout-datatable/knockout-datatable.js"></script>
+    <script src="bower_components/elasticsearch/elasticsearch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
