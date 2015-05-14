@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://www.macalester.edu/resources/v2/css/blueprint/screen.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://www.macalester.edu/resources/v2/css/blueprint/print.css"> -->
+	<link rel="stylesheet" type="text/css" href="http://library.macalester.edu/layout.css">
+	<link rel="stylesheet" type="text/css" href="http://www.macalester.edu/resources/v2/css/mainNav.css">
+	<link rel="stylesheet" type="text/css" href="http://www.macalester.edu/resources/v2/css/text.css">
+	<link rel="stylesheet" type="text/css" href="http://library.macalester.edu/basic.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+
+	<script type="text/javascript" src="http://www.macalester.edu/resources/v2/javascript/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function() {
+			// Set the correct menu background image
+			$('#lib-research-resources').css("background-image", "url(http://library.macalester.edu/images/buttons/dataon.png");
+			$('#lib-research-resources').css("text-decoration", "none");
+			$('#lib-research-resources').css("text-transform", "uppercase");
+			$('#lib-research-resources').css("height", "48px");
+			$('#lib-research-resources').css("border-left", "0px dashed #999999");
+			$('#lib-research-resources').css("z-index", "1000");
+			$('#lib-research-resources').css("position", "relative");
+			$('#lib-research-resources').css("padding-left", "0em");
+			$('#lib-research-resources').css("padding-right", "0em");
+			$('#lib-research-resources').css("width", "144px");
+			$('#lib-research-resources').css("border-right", "0px");
+			$('#lib-research-resources').css("border-left", "0px");
+			$('#q').css("top", "-6px");
+			$('#wcsbtn2w').css("top", "-42px");
+		});
+	</script>
+</head>
+<body>
+<div id="docBody">
+	<div id="header">
+		<div class="navBar">
+			<div id="macWordmark">
+				<h1><a href="http://www.macalester.edu/" title="Macalester home page">Macalester College</a></h1>
+			</div>
+			<ul id="mainNav">
+				<li class="navAbout"><a href="http://www.macalester.edu/about/" class="linkOff">About Macalester</a></li>
+				<li class="navAcad"><a href="http://www.macalester.edu/academics/" class="linkOff">Academics</a></li>
+				<li class="navLife"><a href="http://www.macalester.edu/lifeatmac/" class="linkOff">Life at Mac</a></li>
+				<li class="navAdmis"><a href="http://www.macalester.edu/admissions/" class="linkOff">Admissions &amp; Financial Aid</a></li>
+				<li class="navSupport"><a href="http://www.macalester.edu/supportmac/" class="linkOff">Support Mac</a></li>
+			</ul>
+			<div id="tasks">
+				<div id="siteSearch">
+					<form method="get" action="http://webapps.macalester.edu/search/index.html">
+						<p>
+							<input class="placehold" type="text" id="siteSearchInput" name="q" value="search directory and site">
+							<button name="submit" type="submit"><img src="http://www.macalester.edu/resources/v2/web-imgs/searchicon.gif" width="16" height="15" alt="Go"></button>
+						</p>
+					</form>
+				</div>
+				<ul id="taskNav">
+					<li><a href="http://www.macalester.edu/siteindex/" class="navAZList">A-Z index</a></li>
+					<li><a href="http://events.macalester.edu/" class="navEvents">Events</a></li>
+					<li><a href="http://www.macalester.edu/give/web" class="navGift">Make a gift</a></li>
+					<li class="seeMoreBody"><span class="seeMoreOptionsLabel">More</span>
+						<ul id="internalLinks">
+							<li>
+								<ul>
+									<li><a href="http://1600grand.macalester.edu" title="portal for current students, faculty and staff">1600grand</a></li>
+									<li><a href="http://email.macalester.edu" title="mail, calendar, docs">Google Apps</a></li>
+									<li><a href="http://moodle.macalester.edu" title="course support system">Moodle</a></li>
+									<li><a href="http://www.macalester.edu/directory/" title="people, departments, orgs">Directory</a></li>
+								</ul>
+							</li>
+							<li>
+								<ul class="internalSection">
+									<li><a href="http://www.macalester.edu/about/maps/">Maps &amp; Directions</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="audienceBar">
+				<ul id="audienceNav">
+					<li class="navStudents"><a href="http://www.macalester.edu/currentstudents/">Current Students</a></li>
+					<li class="navFacStaff"><a href="http://www.macalester.edu/facultystaff/">Faculty/Staff</a></li>
+					<li class="navParentsFam"><a href="http://www.macalester.edu/parents/">Parents &amp; Families</a></li>
+					<li class="navAlumni"><a href="http://www.macalester.edu/alumni/">Alumni</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="body">
+	<div class="mainBlock container">
+		<div class="documentHead span-24">
+			<div class="documentDescFull">
+				<div class="pageCrumbs">
+					<ul>
+						<li><a href="http://www.macalester.edu/index.html" title="Macalester College home page">Home</a></li>
+						<li><a href="http://www.macalester.edu/library/index.html" title="DeWitt Wallace Library home page">DeWitt Wallace Library</a></li>
+						<li class="last-bc">Macalester Data Finder</li>
+					</ul>
+				</div><!-- end  class="pageCrumbs" -->
+				<h1 id="mainlibraryheading">Macalester Data Finder</h1>
+			</div>
+		</div>
+		<script type="text/javascript">
+$(document).ready(
+function setSearchText(){ 
+// var text = "Search Macalester WorldCat: Books, articles, videos and more"; 
+var text ="Tip: Use quotes around exact title or phrase";
+$('#q').val(text);
+var t = os.search("Windows"); 
+if (t!=-1) { $('#q').css("color", "#999"); } else { $('#q').css("color", "#ccc"); }
+$("#q").focus(function(){ 
+	var query = $('#q').val(); 
+	if(query == "Tip: Use quotes around exact title or phrase") {
+		$('#q').val(""); 
+	}
+	$('#q').css("color", "black"); });
+	// var tip = "If you're searching for an exact title or a phrase, use quotes.";
+	var repeat = "no";
+   $("#q").focus(function() {
+	   if(repeat == "no") {	
+	   }
+   });
+   $("#q").focusout(function() {
+	   $('#tip').css('display', 'none');
+	   $('#select').css('top', '16px');
+	   $('#searchformarea').css('height', '94px');
+	   // $('#tip').empty();
+	   // repeat = "no";
+   }); 
+
+$("#searchlibrarywebsite").click(function(){ // toggles local site search
+$("#librarywebsitesearch").toggle();
+$("#libsitesearchform").toggle();
+});
+$("#home").click(function(){
+$(location).attr('href',"http://www.macalester.edu/library/index.html");
+});
+$("#libdatabases").click(function(){
+$(location).attr('href',"http://library.macalester.edu/databases/index.php");
+});
+$("#libjournals").click(function(){
+// $(location).attr('href',"http://maclinks.macalester.edu/macalester/az/");
+$(location).attr('href',"http://www.macalester.edu/library/journals/");
+});
+$("#libguides").click(function(){
+$(location).attr('href',"http://library.macalester.edu/guides/index.php");
+});
+$("#libaskus").click(function(){
+$(location).attr('href',"http://www.macalester.edu/library/askus/index.html");
+});
+$("#whatami").hover(
+function () {
+$('#whatamiimage').attr("src", "http://www.macalester.edu/library/images/buttons/whatamiopen.png");
+$('#whatamiimage').attr("width", "546");
+}, 
+function () {
+$('#whatamiimage').attr("src", "http://www.macalester.edu/library/images/buttons/whatamiclosed.png");
+$('#whatamiimage').attr("width", "215");
+}	
+);
+var homeimage = $("#home").css("background-image");
+if(homeimage.search("homeon.png") == -1 ) {
+$("#home").hover(
+function () {
+	$('#home').css("background-image", "url(http://www.macalester.edu/library/images/buttons/homehover.png)");
+	$('#home').attr("title", "Library Homepage");
+}, 
+function () {
+	$('#home').css("background-image", "url(http://www.macalester.edu/library/images/buttons/homeoff.png)");
+});};
+var databasesimage = $("#libdatabases").css("background-image");
+if(databasesimage.search("dataon.png") == -1 ) {
+$("#libdatabases").hover(
+function () {
+	$('#libdatabases').css("background-image", "url(http://www.macalester.edu/library/images/buttons/datahover.png)");
+	$('#libdatabases').attr("title", "Use to find articles, data, and much more");
+}, 
+function () {
+	$('#libdatabases').css("background-image", "url(http://www.macalester.edu/library/images/buttons/dataoff.png)");
+});};
+var journalsimage = $("#libjournals").css("background-image");
+if(journalsimage.search("journalson.png") == -1 ) {
+$("#libjournals").hover(
+function () {
+	$('#libjournals').css("background-image", "url(http://www.macalester.edu/library/images/buttons/journalshover.png)");
+	$('#libjournals').attr("title", "Find Journals, Newspapers, and Magazines");
+}, 
+function () {
+	$('#libjournals').css("background-image", "url(http://www.macalester.edu/library/images/buttons/journalsoff.png)");
+});};
+var guidesimage = $("#libguides").css("background-image");
+if(guidesimage.search("guideson.png") == -1 ) {
+$("#libguides").hover(
+function () {
+	$('#libguides').css("background-image", "url(http://www.macalester.edu/library/images/buttons/guideshover.png)");
+	$('#libguides').attr("title", "Library resources filtered by course or subject");
+}, 
+function () {
+	$('#libguides').css("background-image", "url(http://www.macalester.edu/library/images/buttons/guidesoff.png)");
+});};
+var askusimage = $("#libaskus").css("background-image");
+if(askusimage.search("askuson.png") == -1 ) {
+$("#libaskus").hover(
+function () {
+	$('#libaskus').css("background-image", "url(http://www.macalester.edu/library/images/buttons/askushover.png)");
+	$('#libaskus').attr("title", "We're happy to help!");
+}, 
+function () {
+	$('#libaskus').css("background-image", "url(http://www.macalester.edu/library/images/buttons/askusoff.png)");
+});};	
+});
+		</script>
+		<style type="text/css">
+			#select {position:relative; top: 16px; left: 8px;} 
+			#libsearcharea {  height: 269px; } 
+			#libsearcharea2 { margin-left: 15px; margin-right:15px; margin-bottom: 15px; margin-top: 0px;width: 922px; height: 273px; }
+		</style>
+		<div id="libnavigation">
+			<div id="searchbutton"></div>
+			<div id="menuwrapper" style="width: 760px;">
+				<div id="home" title="Library Homepage" style="background-image: url(http://www.macalester.edu/library/images/buttons/homeoff.png);">
+					<a class="navitem" name="Home" title="Home" href="http://www.macalester.edu/library/index.html">Home</a>
+				</div>
+				<div id="libdatabases">
+					<a class="navitem" name="Research Databases" title="Research Databases" href="http://library.macalester.edu/databases/index.php">Databases</a>
+				</div>
+				<div id="libjournals" title="Find Journals, Newspapers, and Magazines" style="background-image: url(http://www.macalester.edu/library/images/buttons/journalsoff.png);">
+					<a class="navitem" name="Find Journals, Newspapers, and Magazines" title="Find Journals, Newspapers, and Magazines" href="http://macalester.liblink.umn.edu/macalester/az/">Journals</a>
+				</div>
+				<div id="libguides">
+					<a class="navitem" name="Guides" title="Guides" href="http://library.macalester.edu/guides/index.php">Guides</a>
+				</div>
+				<div id="lib-research-resources" style="text-decoration: none; text-transform: uppercase; height: 48px; border-left-width: 0px; z-index: 1000; position: relative; padding-left: 0em; padding-right: 0em; width: 144px; border-right-width: 0px; background-image: url(http://library.macalester.edu/images/buttons/dataon.png);">
+					<a class="navitem" name="Research Resources" title="Research Resources" href="#">Resources</a>
+				</div>
+				<div id="libaskus">
+					<a class="navitem" name="AskUs" title="AskUs" href="http://www.macalester.edu/library/askus/index.html">AskUs</a>
+				</div>
+			</div><!-- end menu wrapper -->
+		</div>
+		<script type="text/javascript">	
+	var s = $.browser.version;
+	var r = s.search("8.");
+	if( $.browser.msie && r == 0){
+		// $('#q').css("border", "1px black solid");
+		$('#q').css("height", "30px");
+		$('#q').css("width", "810px");
+		$('#q').css("padding-top", ".4em");
+	}
+	var os=navigator.appVersion;
+	var t = os.search("Windows");
+	if (t!=-1) {
+		$('.option').css("background-color", "#fff");
+		if( $.browser.mozilla){
+			$('#q').css("top", "15px");
+			$('#q').css("height", "34px");
+			$('#wcsbtn2w').css("position", "relative");
+			$('#q').css("position", "relative");
+			$('#wcsbtn2w').css("top", "15px");
+			$('#wcsbtn2w').css("z-index", "1000");
+			$('#wcsbtn2w').css("left", "770px");
+			$('#q').css("width", "809px");
+			// $('#body').css("font-size", "larger");
+			$('.subSiteHome').css("padding-left", "0px");
+			$('.subSiteHome').css("margin-left", "0px");
+			$('.subSiteHome').css("font-size", "smaller");
+			$('.subSiteHome li').css("padding-left", "0px");
+			$('.subSiteHome li').css("margin-left", "0px");
+			$('.subSiteHome li a').css("padding-left", "0px");
+			$('.subSiteHome li a').css("margin-left", "0px");
+			$('#select').css('top', '18px');
+		}
+		if( $.browser.msie) {
+			$('.option').css("background-color", "#fff");	
+			$('#q').css("width", "750px");	
+		}
+		var s = $.browser.version;
+		var r = s.search(".");
+		var version = s.slice(0, r);
+		if( $.browser.msie){
+			$('#wcsbtn2w').css("margin-top", "2px");
+			$('#formatdropdown').css("margin-top", "8px");
+			// $('#formatdropdown').css("margin-left", "4px");
+			// $('#q').css("margin-top", "4px");
+	}
+}
+$(document).ready(function(){
+	var os="Unknown OS";
+	if (navigator.appVersion.indexOf("Win")!=-1) os="Windows";
+	else if (navigator.appVersion.indexOf("Mac")!=-1) os="MacOS";
+	else if (navigator.appVersion.indexOf("X11")!=-1) os="UNIX";
+	else if (navigator.appVersion.indexOf("Linux")!=-1) os="Linux";
+	var s = $.browser.version;
+	var r = s.search("9.");
+	if( $.browser.msie && r == 0){
+			$('#wcsbtn2w').css("margin-top", "3px");
+			// $('#q').css("margin-top", "4px");
+	}
+	if($.browser.mozilla && os=="Windows") {
+		$("#wcsbtn2w").css("top", "-31px");
+		$("#formatdropdown").css("top", "-10px");
+		$("#q").css("top", "-4px");
+		$("#wcsbtn2w").css("top", "-34px");
+	}
+	if(os=="MacOS") {
+		if($.browser.mozilla){
+			$('#select').css('top', '18px');
+			$("#formatdropdown").css("top", "-2px");
+			$("#wcsbtn2w").css("top", "-40px");
+		}
+	}
+});
+		</script>
+		<div class="span-7">
+			<div id="happenings">
+				<h3 class="selected"><a href="#" title="Types of Data">Types of Data</a></h3>
+				<div class="frontPageEvents">
+					<div class="content">
+						<ul class="data-types types active" data-limit-type="types">
+							<li class="infotypes no-data">
+								No results
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Next Category -->
+				<h3 class="selected"><a href="#" title="Source Type">Source Type</a></h3>
+				<div class="frontPageEvents">
+					<div class="content">
+						<ul class="source-type types hidden" data-limit-type="source_type">
+							<li class="infotypes no-data">
+								No results
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Next Category -->
+				<h3 class="selected"><a href="#" title="Collection Frequency">Collection Frequency</a></h3>
+				<div class="frontPageEvents">
+					<div class="content">
+						<ul class="collection-frequency types hidden" data-limit-type="frequency">
+							<li class="infotypes no-data">
+								No results
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Next Category -->
+				<h3 class="selected"><a href="#" title="Time Periods">Time Periods</a></h3>
+				<div class="frontPageEvents">
+					<div class="content">
+						<ul class="time-periods types hidden" data-limit-type="time_periods">
+							<li class="infotypes no-data">
+								No results
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Next Category -->
+				<h3 class="selected"><a href="#" title="Geographic Locations">Geographic Locations</a></h3>
+				<div class="frontPageEvents">
+					<div class="content">
+						<ul class="data-locations types hidden" data-limit-type="locations">
+							<li class="infotypes no-data">
+								No results
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Next Category -->
+				<h3 class="selected"><a href="#" title="Geographic Granularity">Geographic Granularity</a></h3>
+				<div class="frontPageEvents">
+					<div class="content">
+						<ul class="geo-granularity types hidden" data-limit-type="granularity">
+							<li class="infotypes no-data">
+								No results
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="span-19">
+			<form id="libsearcharea3">
+				<div class="dataset-size" style="margin-bottom: 10px;"></div>
+				<input type="text" placeholder="Search Data Resources">
+				<div>
+					<a href="#" class="clear-search">Clear search</a>
+				</div>
+			</form>
+			<div class="search-results"></div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	#libsearcharea3 .clear-search {
+		display: inline-block; margin-top: 10px; background-color: #16a085; 
+		padding: 6px 12px; font-size: 14px; text-decoration: none; 
+		border-color: #16a085; text-shadow: 0 -1px 0 #107360; color: #fff; 
+	}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	var orig_url = "http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_search?pretty=true&size=10000&q=";
+	
+	var params = {
+		types: 			"",
+		source_type: 	"",
+		subject_areas: 	"",
+		time_periods: 	"",
+		locations: 		"",
+		granularity:    "",
+		frequency: 		"",
+		search: 		""
+	};
+
+	// This gets the top 10 of everything
+	fetch(orig_url + "*:*");
+
+	$(document).on('click', '.clear-search', function(e) {
+		e.preventDefault();
+		resetNFetch(orig_url + "*:*");
+	});
+
+	$('#libsearcharea3').submit(function(e) {
+		e.preventDefault();
+		var category = $('#libsearcharea3 option:selected').data('search-category');
+		params.search = $('#libsearcharea3 > input').val().trim();
+		if (params.search.length) {
+			var url = "http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_search?q=";
+			fetch(url + "description" + ":" + (params.search.replace(/\s+/g, "+")));
+		}
+	});
+
+	$(document).on('click', '.infotypes a', function(e) {
+		e.preventDefault();
+		var lname = $(this).data("limit-name");
+		if ((!$(this).hasClass('active')) && (lname)) {
+			$(this).parent().parent().find('a.active').removeClass('active');
+			$(this).addClass('active');
+			var ltype = $(this).parent().parent().data("limit-type");
+			params[ltype] = lname;
+			fetch(createURL());
+		}
+	});
+
+	$(document).on('click', '.resource .resource-tag', function(e) { 
+		e.preventDefault(); 
+		var url = $(this).attr('href');
+		if (url)
+			resetNFetch(url);
+		
+	});
+
+	$('#happenings > .selected a').click(function(e) {
+		e.preventDefault();
+		var ul = $(this).parent().next('.frontPageEvents').children('.content').first().children('ul').first();
+		if (ul.hasClass('active')) {
+			ul.removeClass('active').slideUp(500);
+		} else {
+			$('#happenings .content ul').removeClass('active').slideUp(500);
+			ul.addClass('active').slideDown(500);
+		}
+	});
+
+	function resetNFetch(url) {
+		params = {
+			types: 			"",
+			source_type: 	"",
+			time_periods: 	"",
+			locations: 		"",
+			granularity:    "",
+			frequency: 		"",
+			search: 		""
+		};
+		fetch(url);
+	}
+
+	function createURL() {
+		var tempURL = orig_url;
+		var and = false;
+		if (params.search.length) {
+			tempURL += "description:" + params.search;
+			and = true;
+		}
+
+		if (params.types.length) {
+			tempURL += (and ? "&types:" : "types:") + params.types;
+			and = true;
+		}
+
+		if (params.source_type.length) {
+			tempURL += (and ? "&source_type:" : "source_type:") + params.source_type;
+			and = true;
+		}
+
+		if (params.frequency.length) {
+			tempURL += (and ? "&frequency:" : "frequency:") + params.frequency;
+			and = true;
+		}
+
+		if (params.granularity.length) {
+			tempURL += (and ? "&geographic_granularity:" : "geographic_granularity:") + params.granularity;
+			and = true;
+		}
+
+		if (params.time_periods.length) {
+			tempURL += (and ? "&time_periods:" : "time_periods:") + params.time_periods;
+			and = true;
+		}
+
+		if (params.locations.length) 
+			tempURL += (and ? "&locations:" : "locations:") + params.locations;
+		
+		return tempURL;
+	}
+
+	function fetch(url) {
+		var dataset = [];
+		$.ajax({
+			url: 			url,
+			type: 			"GET",
+			crossDomain: 	true,
+			dataType: 		"json",
+			success: 		function (data) {
+				if (data.hits.hits.length) {
+					$('.search-results').html("");
+					var time_periods = new Array(), data_types = new Array(), 
+						data_locations = new Array(), source_type = new Array(), 
+						granularity = new Array(), frequency = new Array();
+					if ((data.hits.total) && (url.match(/\*\:\*\s*$/))) {
+						$('.dataset-size').text(data.hits.total + " resources are indexed in the DataFinder");
+					};
+
+					var records = _(data.hits.hits).sortBy(function(hit) { 
+						return hit['_source']['title'].trim(); 
+					});
+					$.each(records, function(index, value) {
+						if (value._source['url']) {
+							var tags = value._source["types"];
+							var tag_links = "";
+							if (tags) {
+								var arr = tags.split(", ");
+								tag_links += "<a style=\"font-weight: 300; font-size: .9em;color: gray\" href=\"" + orig_url + "types:" + arr[0] + "\" class=\"resource-tag\">" + arr[0] + "</a>";
+								for (var i = 1; i < arr.length; i++) {
+									tag_links += "<span style=\"margin-left: .5em; margin-right: .5em; font-weight: 300; font-size: .9em; color: gray\">|</span><a style=\"font-weight: 300; font-size: .9em;color: gray\" href=\"" + orig_url + "types:" + encodeURIComponent(arr[i]) + "\" class=\"resource-tag\">" + arr[i] + "</a>";
+								};
+							};
+							$('.search-results').append(
+								"<div class=\"row\" data-resource-category=\"" + tags + "\">" + 
+									"<span class=\"resource\">" + 
+										"<a style=\"color:#0000FF; font-size:1em;\" class=\"resourcelink\" target=\"_blank\" href=\"" + value._source['url'].trim() + "\"><b>" + value._source['title'].trim() + "</b></a><br>" + 
+											value._source['description'].trim() + "<br>" + tag_links +
+										"<br style=\"clear:both\">" +
+									"</span>" + 
+								"</div>"
+							);
+
+							// Source Type
+							if (value._source["source_type"]) {
+								var src_types = value._source["source_type"].split(",");
+								for (var i = 0; i < src_types.length; i++) {
+									var trimmed = src_types[i].trim();
+									if (trimmed.length)
+										source_type[trimmed] = source_type[trimmed] ? source_type[trimmed] + 1 : 1;
+								};
+							};
+
+							// Geographic Granularity
+							if (value._source["geographic_granularity"]) {
+								var geo_granularity = value._source["geographic_granularity"].split(",");
+								for (var i = 0; i < geo_granularity.length; i++) {
+									var trimmed = geo_granularity[i].trim();
+									if (trimmed.length)
+										granularity[trimmed] = granularity[trimmed] ? granularity[trimmed] + 1 : 1;
+								};
+							};
+
+							// Collection Frequency
+							if (value._source["frequency"]) {
+								var freq = value._source["frequency"].split(",");
+								for (var i = 0; i < freq.length; i++) {
+									var trimmed = freq[i].trim();
+									if (trimmed.length)
+										frequency[trimmed] = frequency[trimmed] ? frequency[trimmed] + 1 : 1;
+								};
+							};
+
+							// Types Of Data: Types of Data Included (Aaron suggests - clickable facet)
+							if (value._source["types"]) {
+								var types = value._source["types"].split(",");
+								for (var i = 0; i < types.length; i++) {
+									var trimmed = types[i].trim();
+									if (trimmed.length)
+										data_types[trimmed] = data_types[trimmed] ? data_types[trimmed] + 1 : 1;
+								};
+							};
+
+							// Time Periods: Time period(s) covered by data
+							if (value._source["time_periods"]) {
+								var periods = value._source["time_periods"].split(",");
+								for (var i = 0; i < periods.length; i++) {
+									var trimmed = periods[i].trim();
+									if (trimmed.length)
+										time_periods[trimmed] = time_periods[trimmed] ? time_periods[trimmed] + 1 : 1;
+								};
+							};
+
+							// Time Periods: Time period(s) covered by data
+							if (value._source["locations"]) {
+								var loc = value._source["locations"].split(",");
+								for (var i = 0; i < loc.length; i++) {
+									var trimmed = loc[i].trim();
+									if (trimmed.length)
+										data_locations[trimmed] = data_locations[trimmed] ? data_locations[trimmed] + 1 : 1;
+								};
+							};
+						};
+					});
+
+					// Collection Frequency
+					if (Object.keys(frequency).length) {
+						$('.collection-frequency').html("");
+						for (freq in frequency) {
+							$('.collection-frequency').append(
+								"<li class=\"infotypes\">" + 
+									"<a href=\"#\" data-limit-name='" + freq + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + freq + " (" + frequency[freq] + ")</a>" + 
+								"</li>"
+							);
+						}
+					} else {
+						$('.collection-frequency').html(
+							"<li class=\"infotypes no-data\">No results</li>"
+						);
+					}
+
+					// Geographic Granularity
+					if (Object.keys(granularity).length) {
+						$('.geo-granularity').html("");
+						for (gran in granularity) {
+							$('.geo-granularity').append(
+								"<li class=\"infotypes\">" + 
+									"<a href=\"#\" data-limit-name='" + gran + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + gran + " (" + granularity[gran] + ")</a>" + 
+								"</li>"
+							);
+						}
+					} else {
+						$('.geo-granularity').html(
+							"<li class=\"infotypes no-data\">No results</li>"
+						);
+					}
+
+					// Source Types
+					if (Object.keys(source_type).length) {
+						$('.source-type').html("");
+						for (stype in source_type) {
+							$('.source-type').append(
+								"<li class=\"infotypes\">" + 
+									"<a href=\"#\" data-limit-name='" + stype + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + stype + " (" + source_type[stype] + ")</a>" + 
+								"</li>"
+							);
+						}
+					} else {
+						$('.source-type').html(
+							"<li class=\"infotypes no-data\">No results</li>"
+						);
+					}
+
+					// Add Types Of Data
+					if (Object.keys(data_types).length) {
+						$('.data-types').html("");
+						for (dtype in data_types) {
+							$('.data-types').append(
+								"<li class=\"infotypes\">" + 
+									"<a href=\"#\" data-limit-name='" + dtype + "'><span class='hidden glyphicon glyphicon-ok'></span> " + dtype + " (" + data_types[dtype] + ")</a>" + 
+								"</li>"
+							);
+						}
+					} else {
+						$('.data-types').html(
+							"<li class=\"infotypes no-data\">No results</li>"
+						);
+					}
+
+					// Time Periods
+					if (Object.keys(time_periods).length) {
+						$('.time-periods').html("");
+						for (period in time_periods) {
+							$('.time-periods').append(
+								"<li class=\"infotypes\">" + 
+									"<a href=\"#\" data-limit-name='" + period + "'><span class='hidden glyphicon glyphicon-ok'></span> " + period + " (" + time_periods[period] + ")</a>" + 
+								"</li>"
+							);
+						}
+					} else {
+						$('.time-periods').html(
+							"<li class=\"infotypes no-data\">No results</li>"
+						);
+					}
+
+					// Geographic Locations
+					if (Object.keys(data_locations).length) {
+						$('.data-locations').html("");
+						for (loc in data_locations) {
+							$('.data-locations').append(
+								"<li class=\"infotypes\">" + 
+									"<a href=\"#\" data-limit-name='" + loc + "'><span class='hidden glyphicon glyphicon-ok'></span> " + loc + " (" + data_locations[loc] + ")</a>" + 
+								"</li>"
+							);
+						}
+					} else {
+						$('.data-locations').html(
+							"<li class=\"infotypes no-data\">No results</li>"
+						);
+					}
+				} else {
+					$('.search-results').html("<div class='row'>No results found, try refining your search</div>");
+				};
+			}
+		});
+	}
+	
+});
+</script>
+</body>
+</html>
