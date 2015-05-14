@@ -9,3 +9,8 @@ sudo docker run -d \
   --link elasticsearch:elasticsearch \
   -p 8080:8080 \
    bhillmann/nginx
+
+sudo docker run -d \
+  --name admin \
+  -p 80:80 \
+   bhillmann/nginx
