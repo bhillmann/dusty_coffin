@@ -10,7 +10,7 @@ sudo docker run -d \
   -p 8080:8080 \
    bhillmann/nginx
 
-sudo docker run -d \
+sudo docker run \
   --name admin \
-  -p 80:80 \
+  -P -d \
    bhillmann/nginx
