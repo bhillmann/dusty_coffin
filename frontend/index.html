@@ -103,22 +103,22 @@
 		</div>
 		<script type="text/javascript">
 $(document).ready(
-function setSearchText(){ 
-// var text = "Search Macalester WorldCat: Books, articles, videos and more"; 
+function setSearchText(){
+// var text = "Search Macalester WorldCat: Books, articles, videos and more";
 var text ="Tip: Use quotes around exact title or phrase";
 $('#q').val(text);
-var t = os.search("Windows"); 
+var t = os.search("Windows");
 if (t!=-1) { $('#q').css("color", "#999"); } else { $('#q').css("color", "#ccc"); }
-$("#q").focus(function(){ 
-	var query = $('#q').val(); 
+$("#q").focus(function(){
+	var query = $('#q').val();
 	if(query == "Tip: Use quotes around exact title or phrase") {
-		$('#q').val(""); 
+		$('#q').val("");
 	}
 	$('#q').css("color", "black"); });
 	// var tip = "If you're searching for an exact title or a phrase, use quotes.";
 	var repeat = "no";
    $("#q").focus(function() {
-	   if(repeat == "no") {	
+	   if(repeat == "no") {
 	   }
    });
    $("#q").focusout(function() {
@@ -127,7 +127,7 @@ $("#q").focus(function(){
 	   $('#searchformarea').css('height', '94px');
 	   // $('#tip').empty();
 	   // repeat = "no";
-   }); 
+   });
 
 $("#searchlibrarywebsite").click(function(){ // toggles local site search
 $("#librarywebsitesearch").toggle();
@@ -153,11 +153,11 @@ $("#whatami").hover(
 function () {
 $('#whatamiimage').attr("src", "http://www.macalester.edu/library/images/buttons/whatamiopen.png");
 $('#whatamiimage').attr("width", "546");
-}, 
+},
 function () {
 $('#whatamiimage').attr("src", "http://www.macalester.edu/library/images/buttons/whatamiclosed.png");
 $('#whatamiimage').attr("width", "215");
-}	
+}
 );
 var homeimage = $("#home").css("background-image");
 if(homeimage.search("homeon.png") == -1 ) {
@@ -165,7 +165,7 @@ $("#home").hover(
 function () {
 	$('#home').css("background-image", "url(http://www.macalester.edu/library/images/buttons/homehover.png)");
 	$('#home').attr("title", "Library Homepage");
-}, 
+},
 function () {
 	$('#home').css("background-image", "url(http://www.macalester.edu/library/images/buttons/homeoff.png)");
 });};
@@ -175,7 +175,7 @@ $("#libdatabases").hover(
 function () {
 	$('#libdatabases').css("background-image", "url(http://www.macalester.edu/library/images/buttons/datahover.png)");
 	$('#libdatabases').attr("title", "Use to find articles, data, and much more");
-}, 
+},
 function () {
 	$('#libdatabases').css("background-image", "url(http://www.macalester.edu/library/images/buttons/dataoff.png)");
 });};
@@ -185,7 +185,7 @@ $("#libjournals").hover(
 function () {
 	$('#libjournals').css("background-image", "url(http://www.macalester.edu/library/images/buttons/journalshover.png)");
 	$('#libjournals').attr("title", "Find Journals, Newspapers, and Magazines");
-}, 
+},
 function () {
 	$('#libjournals').css("background-image", "url(http://www.macalester.edu/library/images/buttons/journalsoff.png)");
 });};
@@ -195,7 +195,7 @@ $("#libguides").hover(
 function () {
 	$('#libguides').css("background-image", "url(http://www.macalester.edu/library/images/buttons/guideshover.png)");
 	$('#libguides').attr("title", "Library resources filtered by course or subject");
-}, 
+},
 function () {
 	$('#libguides').css("background-image", "url(http://www.macalester.edu/library/images/buttons/guidesoff.png)");
 });};
@@ -205,15 +205,15 @@ $("#libaskus").hover(
 function () {
 	$('#libaskus').css("background-image", "url(http://www.macalester.edu/library/images/buttons/askushover.png)");
 	$('#libaskus').attr("title", "We're happy to help!");
-}, 
+},
 function () {
 	$('#libaskus').css("background-image", "url(http://www.macalester.edu/library/images/buttons/askusoff.png)");
-});};	
+});};
 });
 		</script>
 		<style type="text/css">
-			#select {position:relative; top: 16px; left: 8px;} 
-			#libsearcharea {  height: 269px; } 
+			#select {position:relative; top: 16px; left: 8px;}
+			#libsearcharea {  height: 269px; }
 			#libsearcharea2 { margin-left: 15px; margin-right:15px; margin-bottom: 15px; margin-top: 0px;width: 922px; height: 273px; }
 		</style>
 		<div id="libnavigation">
@@ -239,7 +239,7 @@ function () {
 				</div>
 			</div><!-- end menu wrapper -->
 		</div>
-		<script type="text/javascript">	
+		<script type="text/javascript">
 	var s = $.browser.version;
 	var r = s.search("8.");
 	if( $.browser.msie && r == 0){
@@ -272,8 +272,8 @@ function () {
 			$('#select').css('top', '18px');
 		}
 		if( $.browser.msie) {
-			$('.option').css("background-color", "#fff");	
-			$('#q').css("width", "750px");	
+			$('.option').css("background-color", "#fff");
+			$('#q').css("width", "750px");
 		}
 		var s = $.browser.version;
 		var r = s.search(".");
@@ -396,9 +396,9 @@ $(document).ready(function(){
 </div>
 <style type="text/css">
 	#libsearcharea3 .clear-search {
-		display: inline-block; margin-top: 10px; background-color: #16a085; 
-		padding: 6px 12px; font-size: 14px; text-decoration: none; 
-		border-color: #16a085; text-shadow: 0 -1px 0 #107360; color: #fff; 
+		display: inline-block; margin-top: 10px; background-color: #16a085;
+		padding: 6px 12px; font-size: 14px; text-decoration: none;
+		border-color: #16a085; text-shadow: 0 -1px 0 #107360; color: #fff;
 	}
 </style>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -407,7 +407,7 @@ $(document).ready(function(){
 $(document).ready(function() {
 
 	var orig_url = "http://ec2-52-10-17-100.us-west-2.compute.amazonaws.com:8080/datasets_index/_search?pretty=true&size=10000&q=";
-	
+
 	var params = {
 		types: 			"",
 		source_type: 	"",
@@ -449,12 +449,12 @@ $(document).ready(function() {
 		}
 	});
 
-	$(document).on('click', '.resource .resource-tag', function(e) { 
-		e.preventDefault(); 
+	$(document).on('click', '.resource .resource-tag', function(e) {
+		e.preventDefault();
 		var url = $(this).attr('href');
 		if (url)
 			resetNFetch(url);
-		
+
 	});
 
 	$('#happenings > .selected a').click(function(e) {
@@ -514,9 +514,9 @@ $(document).ready(function() {
 			and = true;
 		}
 
-		if (params.locations.length) 
+		if (params.locations.length)
 			tempURL += (and ? "&locations:" : "locations:") + params.locations;
-		
+
 		return tempURL;
 	}
 
@@ -530,15 +530,15 @@ $(document).ready(function() {
 			success: 		function (data) {
 				if (data.hits.hits.length) {
 					$('.search-results').html("");
-					var time_periods = new Array(), data_types = new Array(), 
-						data_locations = new Array(), source_type = new Array(), 
+					var time_periods = new Array(), data_types = new Array(),
+						data_locations = new Array(), source_type = new Array(),
 						granularity = new Array(), frequency = new Array();
 					if ((data.hits.total) && (url.match(/\*\:\*\s*$/))) {
 						$('.dataset-size').text(data.hits.total + " resources are indexed in the DataFinder");
 					};
 
-					var records = _(data.hits.hits).sortBy(function(hit) { 
-						return hit['_source']['title'].trim(); 
+					var records = _(data.hits.hits).sortBy(function(hit) {
+						return hit['_source']['title'].trim();
 					});
 					$.each(records, function(index, value) {
 						if (value._source['url']) {
@@ -552,12 +552,12 @@ $(document).ready(function() {
 								};
 							};
 							$('.search-results').append(
-								"<div class=\"row\" data-resource-category=\"" + tags + "\">" + 
-									"<span class=\"resource\">" + 
-										"<a style=\"color:#0000FF; font-size:1em;\" class=\"resourcelink\" target=\"_blank\" href=\"" + value._source['url'].trim() + "\"><b>" + value._source['title'].trim() + "</b></a><br>" + 
+								"<div class=\"row\" data-resource-category=\"" + tags + "\">" +
+									"<span class=\"resource\">" +
+										"<a style=\"color:#0000FF; font-size:1em;\" class=\"resourcelink\" target=\"_blank\" href=\"" + value._source['url'].trim() + "\"><b>" + value._source['title'].trim() + "</b></a><br>" +
 											value._source['description'].trim() + "<br>" + tag_links +
 										"<br style=\"clear:both\">" +
-									"</span>" + 
+									"</span>" +
 								"</div>"
 							);
 
@@ -628,8 +628,8 @@ $(document).ready(function() {
 						$('.collection-frequency').html("");
 						for (freq in frequency) {
 							$('.collection-frequency').append(
-								"<li class=\"infotypes\">" + 
-									"<a href=\"#\" data-limit-name='" + freq + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + freq + " (" + frequency[freq] + ")</a>" + 
+								"<li class=\"infotypes\">" +
+									"<a href=\"#\" data-limit-name='" + freq + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + freq + " (" + frequency[freq] + ")</a>" +
 								"</li>"
 							);
 						}
@@ -644,8 +644,8 @@ $(document).ready(function() {
 						$('.geo-granularity').html("");
 						for (gran in granularity) {
 							$('.geo-granularity').append(
-								"<li class=\"infotypes\">" + 
-									"<a href=\"#\" data-limit-name='" + gran + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + gran + " (" + granularity[gran] + ")</a>" + 
+								"<li class=\"infotypes\">" +
+									"<a href=\"#\" data-limit-name='" + gran + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + gran + " (" + granularity[gran] + ")</a>" +
 								"</li>"
 							);
 						}
@@ -660,8 +660,8 @@ $(document).ready(function() {
 						$('.source-type').html("");
 						for (stype in source_type) {
 							$('.source-type').append(
-								"<li class=\"infotypes\">" + 
-									"<a href=\"#\" data-limit-name='" + stype + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + stype + " (" + source_type[stype] + ")</a>" + 
+								"<li class=\"infotypes\">" +
+									"<a href=\"#\" data-limit-name='" + stype + "'> <span class='hidden glyphicon glyphicon-ok'></span>" + stype + " (" + source_type[stype] + ")</a>" +
 								"</li>"
 							);
 						}
@@ -676,8 +676,8 @@ $(document).ready(function() {
 						$('.data-types').html("");
 						for (dtype in data_types) {
 							$('.data-types').append(
-								"<li class=\"infotypes\">" + 
-									"<a href=\"#\" data-limit-name='" + dtype + "'><span class='hidden glyphicon glyphicon-ok'></span> " + dtype + " (" + data_types[dtype] + ")</a>" + 
+								"<li class=\"infotypes\">" +
+									"<a href=\"#\" data-limit-name='" + dtype + "'><span class='hidden glyphicon glyphicon-ok'></span> " + dtype + " (" + data_types[dtype] + ")</a>" +
 								"</li>"
 							);
 						}
@@ -692,8 +692,8 @@ $(document).ready(function() {
 						$('.time-periods').html("");
 						for (period in time_periods) {
 							$('.time-periods').append(
-								"<li class=\"infotypes\">" + 
-									"<a href=\"#\" data-limit-name='" + period + "'><span class='hidden glyphicon glyphicon-ok'></span> " + period + " (" + time_periods[period] + ")</a>" + 
+								"<li class=\"infotypes\">" +
+									"<a href=\"#\" data-limit-name='" + period + "'><span class='hidden glyphicon glyphicon-ok'></span> " + period + " (" + time_periods[period] + ")</a>" +
 								"</li>"
 							);
 						}
@@ -708,8 +708,8 @@ $(document).ready(function() {
 						$('.data-locations').html("");
 						for (loc in data_locations) {
 							$('.data-locations').append(
-								"<li class=\"infotypes\">" + 
-									"<a href=\"#\" data-limit-name='" + loc + "'><span class='hidden glyphicon glyphicon-ok'></span> " + loc + " (" + data_locations[loc] + ")</a>" + 
+								"<li class=\"infotypes\">" +
+									"<a href=\"#\" data-limit-name='" + loc + "'><span class='hidden glyphicon glyphicon-ok'></span> " + loc + " (" + data_locations[loc] + ")</a>" +
 								"</li>"
 							);
 						}
@@ -724,7 +724,7 @@ $(document).ready(function() {
 			}
 		});
 	}
-	
+
 });
 </script>
 </body>

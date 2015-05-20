@@ -5,17 +5,17 @@ sudo docker run -d  \
   dockerfile/elasticsearch
 
 sudo docker run -d \
-  --name nginx \
+  --name elasticsearch-proxy \
   --link elasticsearch:elasticsearch \
   -p 8080:8080 \
-   bhillmann/nginx
+   bhillmann/elasticsearch-proxy
 
 sudo docker run \
   --name admin \
-  -p 9000:9000 \
+  -p 81:8080 \
   -d bhillmann/admin
 
-sudo docker run -i \
--t --volumes-from admin \
---name adminfiles \
-debian /bin/bash
+sudo docker run \
+  --name frontend \
+  -p 80:8080 \
+  -d bhillmann/frontend
