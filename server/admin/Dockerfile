@@ -1,9 +1,5 @@
 FROM nginx
 
-RUN rm /etc/nginx/conf.d/default.conf
-
-COPY conf /etc/nginx
+COPY conf/nginx.conf /etc/nginx/nginx.conf
 
 COPY dist /var/www/dist
-
-CMD service nginx start
