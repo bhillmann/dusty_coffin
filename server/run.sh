@@ -10,10 +10,10 @@ sudo docker run -d \
   -p 8080:8080 \
    bhillmann/nginx
 
-sudo docker run -d \
+sudo docker run \
   --name admin \
   -p 9000:9000 \
-   bhillmann/admin
+  -d bhillmann/admin
 
 sudo docker run -i \
 -t --volumes-from admin \

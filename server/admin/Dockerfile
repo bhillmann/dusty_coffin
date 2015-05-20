@@ -1,5 +1,5 @@
 FROM nginx
 
-COPY conf/nginx.conf /etc/nginx/nginx.conf
+COPY conf /etc/nginx
 
 COPY dist /var/www/dist
