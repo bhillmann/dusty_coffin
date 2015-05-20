@@ -13,8 +13,7 @@ sudo docker run -d \
 sudo docker run -d \
   --name admin \
   -p 9000:9000 \
-   bhillmann/admin \
-	nginx
+   bhillmann/admin
 
 sudo docker run -i \
 -t --volumes-from admin \
