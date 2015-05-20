@@ -12,10 +12,10 @@ sudo docker run -d \
 
 sudo docker run \
   --name admin \
-  -p 81:8080 \
+  -p 9100:80 \
   -d bhillmann/admin
 
 sudo docker run \
   --name frontend \
-  -p 80:8080 \
+  -p 9000:80 \
   -d bhillmann/frontend
