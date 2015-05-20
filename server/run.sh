@@ -10,7 +10,13 @@ sudo docker run -d \
   -p 8080:8080 \
    bhillmann/nginx
 
-sudo docker run \
+sudo docker run -d \
   --name admin \
-  -P -d \
-   bhillmann/nginx
+  -p 9000:9000 \
+   bhillmann/admin \
+	nginx
+
+sudo docker run -i \
+-t --volumes-from admin \
+--name adminfiles \
+debian /bin/bash
