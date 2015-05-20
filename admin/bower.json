@@ -1,0 +1,9 @@
+{
+  "name": "admin",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "knockout-datatable": "~0.6.1",
+    "elasticsearch": "~4.0.2"
+  }
+}
