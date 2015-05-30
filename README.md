@@ -7,14 +7,14 @@ Each of the modules are located in their own directory:
 * server - contains all of the docker files
 
 The steps to get the server up are as follows:
-1. Clone this repository onto the server
-2. Install docker
-  a. You can read the installation details here: https://docs.docker.com/installation/
-3. Install node
-  a. You can red the installation details here: https://nodejs.org/
-  b. From node install the npm
-  c. Then run the command <code>npm install -g grunt</code>
-  d. Then run the command <code>npm install -g grunt-cli</code>
-4. Run the commands line by line in server/install.sh
-5. Run the commands line by line in server/run.sh
-6. The admin docker is currently working, so instead run the command <code>grunt serve</code> from ./admin
+* Clone this repository onto the server
+* Install docker
+  * You can read the installation details here: https://docs.docker.com/installation/
+* Install node
+  * You can red the installation details here: https://nodejs.org/
+  * From node install the npm
+  * Then run the command <code>npm install -g grunt</code>
+  * Then run the command <code>npm install -g grunt-cli</code>
+* Run the commands line by line in server/install.sh
+* Run the commands line by line in server/run.sh
+* The admin docker is currently working, so instead run the command <code>grunt serve</code> from ./admin
